@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.7 on win32)" generated="2024-02-09T06:29:53.716904" rpa="false" schemaversion="5">
+<suite id="s1" name="Invalid Login Suite" source="C:\Users\mgilorka\PycharmProjects\HealthRecordRobotFreamework\tests\1__login__suite\invalid_login_suite.robot">
+<test id="s1-t1" name="Valid InvalidLogin Test" line="11">
+<kw name="Launch Browser And Nevigate To Url" owner="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-09T06:29:53.867000" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-09T06:29:53.866404" elapsed="5.570785"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-09T06:29:59.437189" elapsed="0.129420"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-02-09T06:29:59.566609" elapsed="0.000000"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-02-09T06:29:59.566609" level="INFO">Opening url 'https://demo.openemr.io/b/openemr'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-02-09T06:29:59.566609" elapsed="5.342161"/>
+</kw>
+<status status="PASS" start="2024-02-09T06:29:53.856883" elapsed="11.051887"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-09T06:30:04.909750" level="INFO">Typing text 'john' into text field 'id=authUser'.</msg>
+<arg>id=authUser</arg>
+<arg>john</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T06:30:04.909750" elapsed="0.107035"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-02-09T06:30:05.016785" level="INFO">Typing password into text field 'css=#clearPass'.</msg>
+<msg time="2024-02-09T06:30:05.056740" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>css=#clearPass</arg>
+<arg>pass121</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T06:30:05.016785" elapsed="0.143762"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-02-09T06:30:05.160547" level="INFO">Selecting options from selection list 'xpath=//select[@name='languageChoice']' by label English (Indian).</msg>
+<arg>xpath=//select[@name='languageChoice']</arg>
+<arg>English (Indian)</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-02-09T06:30:05.160547" elapsed="0.126112"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-09T06:30:05.286659" level="INFO">Clicking element 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T06:30:05.286659" elapsed="1.841047"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-02-09T06:30:07.156523" level="INFO">Element 'xpath=//p[contains(text(),'Invalid')]' contains text 'Invalid username or password'.</msg>
+<arg>xpath=//p[contains(text(),'Invalid')]</arg>
+<arg>Invalid username or password</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-02-09T06:30:07.128578" elapsed="0.027945"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-09T06:30:07.156523" elapsed="2.140706"/>
+</kw>
+<status status="PASS" start="2024-02-09T06:29:53.856883" elapsed="15.440346"/>
+</test>
+<doc>This suite tests the vlaid credential are allowded to access portal</doc>
+<status status="PASS" start="2024-02-09T06:29:53.726168" elapsed="15.571061"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Invalid Login Suite">Invalid Login Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
