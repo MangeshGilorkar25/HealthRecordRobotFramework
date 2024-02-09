@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.7 on win32)" generated="2024-02-09T07:51:15.599059" rpa="false" schemaversion="5">
+<suite id="s1" name="Zvalid Login Csv Suite" source="C:\Users\mgilorka\PycharmProjects\HealthRecordRobotFreamework\tests\1__login__suite\zvalid_login_csv_suite.robot">
+<test id="s1-t1" name="Valid Login_{test_case_id}" line="13">
+<kw name="Launch Browser And Nevigate To Url" owner="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:51:15.798339" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-09T07:51:15.798339" elapsed="4.264436"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-09T07:51:20.062775" elapsed="0.121033"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-02-09T07:51:20.183808" elapsed="0.004634"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:51:20.188442" level="INFO">Opening url 'https://demo.openemr.io/b/openemr'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-02-09T07:51:20.188442" elapsed="5.412855"/>
+</kw>
+<status status="PASS" start="2024-02-09T07:51:15.798339" elapsed="9.802958"/>
+</kw>
+<kw name="Valid Login Template">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:51:25.603415" level="INFO">Typing text 'accountant' into text field 'id=authUser'.</msg>
+<arg>id=authUser</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T07:51:25.602456" elapsed="0.126106"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:51:25.728562" level="INFO">Typing password into text field 'css=#clearPass'.</msg>
+<msg time="2024-02-09T07:51:25.808123" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>css=#clearPass</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T07:51:25.728562" elapsed="0.221234"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:51:25.949796" level="INFO">Selecting options from selection list 'xpath=//select[@name='languageChoice']' by label English (Indian).</msg>
+<arg>xpath=//select[@name='languageChoice']</arg>
+<arg>${language}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-02-09T07:51:25.949796" elapsed="0.108703"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:51:26.058499" level="INFO">Clicking element 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T07:51:26.058499" elapsed="6.818938"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:51:32.888263" level="INFO">Page title is 'OpenEMR'.</msg>
+<arg>${expected_title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-02-09T07:51:32.877437" elapsed="0.010826"/>
+</kw>
+<arg>accountant</arg>
+<arg>accountant</arg>
+<arg>English (Indian)</arg>
+<arg>OpenEMR</arg>
+<status status="PASS" start="2024-02-09T07:51:25.602250" elapsed="7.286013"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-09T07:51:32.888263" elapsed="2.189503"/>
+</kw>
+<status status="PASS" start="2024-02-09T07:51:15.798339" elapsed="19.279427"/>
+</test>
+<test id="s1-t2" name="Valid Login_{test_case_id}" line="13">
+<kw name="Launch Browser And Nevigate To Url" owner="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:51:35.077766" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-09T07:51:35.077766" elapsed="4.162389"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-09T07:51:39.240155" elapsed="0.117235"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-02-09T07:51:39.357390" elapsed="0.000000"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:51:39.357390" level="INFO">Opening url 'https://demo.openemr.io/b/openemr'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-02-09T07:51:39.357390" elapsed="4.602752"/>
+</kw>
+<status status="PASS" start="2024-02-09T07:51:35.077766" elapsed="8.882376"/>
+</kw>
+<kw name="Valid Login Template">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:51:43.960142" level="INFO">Typing text 'receptionist' into text field 'id=authUser'.</msg>
+<arg>id=authUser</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T07:51:43.960142" elapsed="0.147937"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:51:44.108079" level="INFO">Typing password into text field 'css=#clearPass'.</msg>
+<msg time="2024-02-09T07:51:44.148024" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>css=#clearPass</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T07:51:44.108079" elapsed="0.099668"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:51:44.207747" level="INFO">Selecting options from selection list 'xpath=//select[@name='languageChoice']' by label English (Indian).</msg>
+<arg>xpath=//select[@name='languageChoice']</arg>
+<arg>${language}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-02-09T07:51:44.207747" elapsed="0.080414"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:51:44.288161" level="INFO">Clicking element 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T07:51:44.288161" elapsed="5.576868"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:51:49.877543" level="INFO">Page title is 'OpenEMR'.</msg>
+<arg>${expected_title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-02-09T07:51:49.867731" elapsed="0.009812"/>
+</kw>
+<arg>receptionist</arg>
+<arg>receptionist</arg>
+<arg>English (Indian)</arg>
+<arg>OpenEMR</arg>
+<status status="PASS" start="2024-02-09T07:51:43.960142" elapsed="5.917401"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-09T07:51:49.877543" elapsed="2.230315"/>
+</kw>
+<status status="PASS" start="2024-02-09T07:51:35.077766" elapsed="17.030092"/>
+</test>
+<doc>This suite tests the vlaid credential are allowded to access portal</doc>
+<status status="PASS" start="2024-02-09T07:51:15.599059" elapsed="36.508799"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Zvalid Login Csv Suite">Zvalid Login Csv Suite</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-02-09T07:51:35.077766" level="WARN">Multiple tests with name 'Valid Login_{test_case_id}' executed in suite 'Zvalid Login Csv Suite'.</msg>
+</errors>
+</robot>
