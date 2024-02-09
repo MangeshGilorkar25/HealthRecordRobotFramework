@@ -1,83 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.7 on win32)" generated="2024-02-09T06:29:53.716904" rpa="false" schemaversion="5">
-<suite id="s1" name="Invalid Login Suite" source="C:\Users\mgilorka\PycharmProjects\HealthRecordRobotFreamework\tests\1__login__suite\invalid_login_suite.robot">
-<test id="s1-t1" name="Valid InvalidLogin Test" line="11">
+<robot generator="Robot 7.0 (Python 3.11.7 on win32)" generated="2024-02-09T07:08:14.919729" rpa="false" schemaversion="5">
+<suite id="s1" name="Valid Login Suite" source="C:\Users\mgilorka\PycharmProjects\HealthRecordRobotFreamework\tests\1__login__suite\valid_login_suite.robot">
+<test id="s1-t1" name="Valid Login TC1" line="11">
 <kw name="Launch Browser And Nevigate To Url" owner="CommonFunctionality" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-09T06:29:53.867000" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg time="2024-02-09T07:08:15.060587" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
 <arg>browser=${BROWSER_NAME}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-09T06:29:53.866404" elapsed="5.570785"/>
+<status status="PASS" start="2024-02-09T07:08:15.060587" elapsed="5.477047"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-02-09T06:29:59.437189" elapsed="0.129420"/>
+<status status="PASS" start="2024-02-09T07:08:20.537634" elapsed="0.122027"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-02-09T06:29:59.566609" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-09T07:08:20.659661" elapsed="0.000000"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-02-09T06:29:59.566609" level="INFO">Opening url 'https://demo.openemr.io/b/openemr'</msg>
+<msg time="2024-02-09T07:08:20.659661" level="INFO">Opening url 'https://demo.openemr.io/b/openemr'</msg>
 <arg>url=${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-02-09T06:29:59.566609" elapsed="5.342161"/>
+<status status="PASS" start="2024-02-09T07:08:20.659661" elapsed="5.375844"/>
 </kw>
-<status status="PASS" start="2024-02-09T06:29:53.856883" elapsed="11.051887"/>
+<status status="PASS" start="2024-02-09T07:08:15.057822" elapsed="10.978217"/>
 </kw>
+<kw name="Valid Login Template">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-09T06:30:04.909750" level="INFO">Typing text 'john' into text field 'id=authUser'.</msg>
+<msg time="2024-02-09T07:08:26.036039" level="INFO">Typing text 'admin' into text field 'id=authUser'.</msg>
 <arg>id=authUser</arg>
-<arg>john</arg>
+<arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-09T06:30:04.909750" elapsed="0.107035"/>
+<status status="PASS" start="2024-02-09T07:08:26.036039" elapsed="0.103563"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-02-09T06:30:05.016785" level="INFO">Typing password into text field 'css=#clearPass'.</msg>
-<msg time="2024-02-09T06:30:05.056740" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-02-09T07:08:26.147843" level="INFO">Typing password into text field 'css=#clearPass'.</msg>
+<msg time="2024-02-09T07:08:26.197625" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>css=#clearPass</arg>
-<arg>pass121</arg>
+<arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-09T06:30:05.016785" elapsed="0.143762"/>
+<status status="PASS" start="2024-02-09T07:08:26.147843" elapsed="0.126856"/>
 </kw>
 <kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2024-02-09T06:30:05.160547" level="INFO">Selecting options from selection list 'xpath=//select[@name='languageChoice']' by label English (Indian).</msg>
+<msg time="2024-02-09T07:08:26.274699" level="INFO">Selecting options from selection list 'xpath=//select[@name='languageChoice']' by label English (Indian).</msg>
 <arg>xpath=//select[@name='languageChoice']</arg>
-<arg>English (Indian)</arg>
+<arg>${language}</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2024-02-09T06:30:05.160547" elapsed="0.126112"/>
+<status status="PASS" start="2024-02-09T07:08:26.274699" elapsed="0.154972"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-09T06:30:05.286659" level="INFO">Clicking element 'id=login-button'.</msg>
+<msg time="2024-02-09T07:08:26.429671" level="INFO">Clicking element 'id=login-button'.</msg>
 <arg>id=login-button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-09T06:30:05.286659" elapsed="1.841047"/>
+<status status="PASS" start="2024-02-09T07:08:26.429671" elapsed="5.540797"/>
 </kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2024-02-09T06:30:07.156523" level="INFO">Element 'xpath=//p[contains(text(),'Invalid')]' contains text 'Invalid username or password'.</msg>
-<arg>xpath=//p[contains(text(),'Invalid')]</arg>
-<arg>Invalid username or password</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2024-02-09T06:30:07.128578" elapsed="0.027945"/>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:08:31.980414" level="INFO">Page title is 'OpenEMR'.</msg>
+<arg>${expected_title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-02-09T07:08:31.970468" elapsed="0.009946"/>
+</kw>
+<arg>admin</arg>
+<arg>pass</arg>
+<arg>English (Indian)</arg>
+<arg>OpenEMR</arg>
+<status status="PASS" start="2024-02-09T07:08:26.036039" elapsed="5.944375"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-02-09T06:30:07.156523" elapsed="2.140706"/>
+<status status="PASS" start="2024-02-09T07:08:31.980414" elapsed="2.139513"/>
 </kw>
-<status status="PASS" start="2024-02-09T06:29:53.856883" elapsed="15.440346"/>
+<status status="PASS" start="2024-02-09T07:08:15.057822" elapsed="19.062105"/>
+</test>
+<test id="s1-t2" name="Valid Login TC2" line="14">
+<kw name="Launch Browser And Nevigate To Url" owner="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:08:34.119927" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-09T07:08:34.119927" elapsed="4.980562"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-09T07:08:39.100489" elapsed="0.127885"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-02-09T07:08:39.228374" elapsed="0.000000"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:08:39.228374" level="INFO">Opening url 'https://demo.openemr.io/b/openemr'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-02-09T07:08:39.228374" elapsed="4.554594"/>
+</kw>
+<status status="PASS" start="2024-02-09T07:08:34.119927" elapsed="9.663041"/>
+</kw>
+<kw name="Valid Login Template">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:08:43.782968" level="INFO">Typing text 'accountant' into text field 'id=authUser'.</msg>
+<arg>id=authUser</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T07:08:43.782968" elapsed="0.106568"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:08:43.889536" level="INFO">Typing password into text field 'css=#clearPass'.</msg>
+<msg time="2024-02-09T07:08:43.930427" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>css=#clearPass</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T07:08:43.889536" elapsed="0.100459"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:08:43.989995" level="INFO">Selecting options from selection list 'xpath=//select[@name='languageChoice']' by label English (Indian).</msg>
+<arg>xpath=//select[@name='languageChoice']</arg>
+<arg>${language}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-02-09T07:08:43.989995" elapsed="0.100646"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:08:44.090641" level="INFO">Clicking element 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T07:08:44.090641" elapsed="6.165677"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:08:50.270448" level="INFO">Page title is 'OpenEMR'.</msg>
+<arg>${expected_title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-02-09T07:08:50.256318" elapsed="0.014130"/>
+</kw>
+<arg>accountant</arg>
+<arg>accountant</arg>
+<arg>English (Indian)</arg>
+<arg>OpenEMR</arg>
+<status status="PASS" start="2024-02-09T07:08:43.782968" elapsed="6.487480"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-09T07:08:50.270448" elapsed="2.170324"/>
+</kw>
+<status status="PASS" start="2024-02-09T07:08:34.119927" elapsed="18.320845"/>
+</test>
+<test id="s1-t3" name="Valid Login TC3" line="17">
+<kw name="Launch Browser And Nevigate To Url" owner="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:08:52.440772" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-09T07:08:52.440772" elapsed="4.889676"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-09T07:08:57.330448" elapsed="0.129978"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-02-09T07:08:57.460426" elapsed="0.000000"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:08:57.465515" level="INFO">Opening url 'https://demo.openemr.io/b/openemr'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-02-09T07:08:57.465515" elapsed="6.483354"/>
+</kw>
+<status status="PASS" start="2024-02-09T07:08:52.440772" elapsed="11.508420"/>
+</kw>
+<kw name="Valid Login Template">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:09:03.950432" level="INFO">Typing text 'physician' into text field 'id=authUser'.</msg>
+<arg>id=authUser</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T07:09:03.949396" elapsed="0.090918"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:09:04.040314" level="INFO">Typing password into text field 'css=#clearPass'.</msg>
+<msg time="2024-02-09T07:09:04.080152" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>css=#clearPass</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T07:09:04.040314" elapsed="0.105238"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:09:04.145552" level="INFO">Selecting options from selection list 'xpath=//select[@name='languageChoice']' by label Dutch.</msg>
+<arg>xpath=//select[@name='languageChoice']</arg>
+<arg>${language}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-02-09T07:09:04.145552" elapsed="0.084568"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:09:04.230120" level="INFO">Clicking element 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T07:09:04.230120" elapsed="7.271477"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-02-09T07:09:11.520611" level="INFO">Page title is 'OpenEMR'.</msg>
+<arg>${expected_title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-02-09T07:09:11.501597" elapsed="0.019014"/>
+</kw>
+<arg>physician</arg>
+<arg>physician</arg>
+<arg>Dutch</arg>
+<arg>OpenEMR</arg>
+<status status="PASS" start="2024-02-09T07:09:03.949396" elapsed="7.571215"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-09T07:09:11.520611" elapsed="2.130086"/>
+</kw>
+<status status="PASS" start="2024-02-09T07:08:52.440772" elapsed="21.209925"/>
 </test>
 <doc>This suite tests the vlaid credential are allowded to access portal</doc>
-<status status="PASS" start="2024-02-09T06:29:53.726168" elapsed="15.571061"/>
+<status status="PASS" start="2024-02-09T07:08:14.919729" elapsed="58.730968"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Invalid Login Suite">Invalid Login Suite</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="Valid Login Suite">Valid Login Suite</stat>
 </suite>
 </statistics>
 <errors>
